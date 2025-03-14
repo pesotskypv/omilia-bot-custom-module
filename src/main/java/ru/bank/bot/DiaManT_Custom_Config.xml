@@ -1,0 +1,71 @@
+<CustomConfig version="9.5">
+    <Properties>
+        <!-- 1. Для ответов вне бота -->
+        <!-- 2. Для сохранения и получения клиентских данных и прогресса Edu_Bot -->
+        <Property name="dbuser" value="custommodule"/>
+        <Property name="dbpassword" value="custommodule"/>
+        <Property name="dbserver" value="127.0.0.1"/>
+        <Property name="dbname" value="OmiliaIntegration"/>
+
+        <!-- Для поиска ДО и АТМ -->
+        <Property name="yandexapikey" value="45dfde94-12dc-4a8f-ba29-555eff22b6d5"/>
+
+        <!-- Для ответов вне бота -->
+        <Property name="getAnnounceTable" value="dbo.announce"/>
+        <Property name="getAnnouncesTable" value="dbo.announce"/>
+        <Property name="getRequestsTable" value="dbo.request"/>
+        <Property name="getReactionsTable" value="dbo.reaction"/>
+        <Property name="getConfirmsTable" value="dbo.confirm"/>
+
+        <!-- 1. Для импорта контактов в Siebel -->
+        <!-- 2. Для (раз)блокировки карт -->
+        <!-- <Property name="siebeladdr" value="https://crmcert/siebel/app/eai_anon_rus/rus?SWEExtSource=AnonWebService&amp;SWEExtCmd=Execute"/> --> <!-- CERT -->
+        <Property name="siebeladdr" value="https://crm.bank.ru/eai_anon_rus/start.swe?SWEExtSource=AnonWebService&amp;SWEExtCmd=Execute"/> <!-- PROD -->
+
+        <!-- Для запроса длины очереди -->
+        <Property name="omniAddr" value="https://omni.bank.ru"/>
+
+        <!-- 1. Для определения customerId и аутентификации в Телеграм (Edu_Bot) -->
+        <!-- 2. Для запроса количества недавних обращений -->
+        <Property name="omniDbHost" value="127.0.0.1"/>
+        <Property name="omniDbName" value="omni_prod"/>
+        <Property name="omniDbUser" value="dbreport"/>
+        <Property name="omniDbPass" value="dbreport"/>
+
+        <!-- Для чат-бота отчётности -->
+        <Property name="ccReportDbHost" value="127.0.0.1"/>
+        <Property name="ccReportDbName" value="ContactCenter"/>
+        <Property name="ccReportDbUser" value="omilia"/>
+        <Property name="ccReportDbPass" value="omilia"/>
+
+        <!-- Для передачи результатов обзвона в Outbound -->
+        <Property name="outboundDialerApi" value="http://retoutbounddialer.bank.ru:4001/DialerApi/soap"/>
+        <Property name="outboundManagementApi" value="http://retoutbound.bank.ru:4003/OutadminApi/OutboundManagement.svc/soap"/>
+        <Property name="outboundUser" value="omilia"/>
+        <Property name="outboundPass" value="Omilia"/>
+
+        <!-- Для запроса количества недавних обращений -->
+        <!-- Интервал в Postgres-формате https://www.postgresql.org/docs/current/datatype-datetime.html#DATATYPE-INTERVAL-INPUT-->
+        <Property name="intervalT1" value="1 minute"/>
+        <Property name="intervalT2" value="15 minutes"/>
+        <Property name="intervalT3" value="1 hour"/>
+        <Property name="intervalT4" value="10 hours"/>
+
+        <!-- Для запроса баланса -->
+        <!-- Для тарифа -->
+        <!-- Формат https://host.domain -->
+        <Property name="BspAddr" value="https://gateway-drbs-prod.apps.ocp.bank"/>
+        <Property name="BspApiAddr" value="https://gateway-bsp-chat-prod.apps.ocp.bank"/>
+
+        <!-- Для ICR DBLookup-->
+        <Property name="OutboundDbHost" value="outbound.gts.ru"/>
+        <Property name="OutboundDbUser" value="BotModule"/>
+        <Property name="OutboundDbPass" value="BotModule"/>
+
+        <!-- Куда отправлять Java Exceptions -->
+        <Property name="emailForExceptions" value="pesotskypv@ya.ru"/>
+
+        <!-- Сервер APBM HR для отправки реакций на предложение о работе  -->
+        <Property name="HrAbpm" value="https://rsb-dialer-content-service-abpm-prod.apps.ocp.bank.ru"/>
+    </Properties>
+</CustomConfig>
